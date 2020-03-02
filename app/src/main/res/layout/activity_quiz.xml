@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.QuizActivity"
+    android:background="@color/colorPrimary">
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_id">
+    </com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:layout_below="@id/adView"
+        android:id="@+id/who_is_this"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:layout_margin="8dp"
+        android:text="@string/who_is_this"
+        android:textColor="@color/white"/>
+
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            app:srcCompat="@drawable/ic_circle"
+            android:padding="4dp"
+            android:layout_width="52dp"
+            android:layout_height="52dp" />
+
+
+        <TextView
+            android:id="@+id/ID_timer"
+            android:textColor="@color/white"
+            tools:text="40"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_below="@id/adView"
+        android:id="@+id/ID_frame_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        tools:text="5"
+        android:text="0"
+        android:layout_toStartOf="@id/frame"
+        android:layout_marginTop="8dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_below="@id/adView"
+        android:id="@+id/frame"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        app:srcCompat="@drawable/ic_gioconda"
+        android:layout_toStartOf="@id/ID_live_count" />
+
+    <TextView
+        android:layout_below="@id/adView"
+        android:layout_toStartOf="@id/like"
+        android:layout_marginTop="8dp"
+        android:id="@+id/ID_live_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="5"
+        android:textColor="@color/white"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_below="@id/adView"
+        android:id="@+id/like"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        app:srcCompat="@drawable/ic_like"
+        android:layout_toStartOf="@id/counter"
+        android:layout_alignParentEnd="true"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_above="@id/ID_lamp"
+        android:id="@+id/ID_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/who_is_this"
+        />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/ID_hint_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ID_quiz_bottm_bar"
+        android:textSize="28sp"
+        tools:text="Person is Male"
+        android:textColor="@color/white"
+        android:layout_marginStart="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:visibility="gone"
+        android:id="@+id/ID_lamp"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:padding="6dp"
+        app:srcCompat="@drawable/ic_lamp"
+        android:layout_above="@id/ID_quiz_bottm_bar"
+        android:layout_alignParentEnd="true"/>
+
+
+    <LinearLayout
+        android:layout_marginBottom="8dp"
+        android:id="@+id/ID_quiz_bottm_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ID_first_checkbox"
+                style="@style/quiz_checkbox_img"
+                android:src="@drawable/ic_check_box_empty" />
+
+            <TextView
+                android:id="@+id/ID_first_answer"
+                style="@style/quiz_text_view"
+                tools:text="Odiacot" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ID_second_checkbox"
+                    style="@style/quiz_checkbox_img"
+                    android:src="@drawable/ic_check_box_empty" />
+
+                <TextView
+                    android:id="@+id/ID_second_answer"
+                    style="@style/quiz_text_view"
+                    tools:text="Odiacot" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ID_third_checkbox"
+                    style="@style/quiz_checkbox_img"
+                    android:src="@drawable/ic_check_box_empty" />
+
+                <TextView
+                    android:id="@+id/ID_third_answer"
+                    style="@style/quiz_text_view"
+                    tools:text="Odiacot" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ID_forth_checkbox"
+                    style="@style/quiz_checkbox_img"
+                    android:src="@drawable/ic_check_box_empty" />
+
+                <TextView
+                    android:id="@+id/ID_forth_answer"
+                    style="@style/quiz_text_view"
+                    tools:text="Odiacot" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

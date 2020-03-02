@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1976d2</color>
+    <color name="colorPrimaryDark">#004ba0</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="colorPrimaryLight">#63a4ff</color>
+    <color name="white">#ffffff</color>
+    <color name="colorClicked">#002171</color>
+
+
+    <!-- Color Pallett #1-->
+    <color name="brown1">#b36b39</color>
+    <color name="silver1">#d7e0e7</color>
+    <color name="green1">#807f3c</color>
+    <color name="light_blue1">#96abb0</color>
+    <color name="black1">#96abb0</color>
+
+    <!--Color Palette #2-->
+    <color name="brown_light2">#e0c1ad</color>
+    <color name="orange2">#ca6539</color>
+    <color name="brown2">#a27e6e</color>
+    <color name="dark_grey2">#312227</color>
+    <color name="dark_red2">#931d33</color>
+
+
+    <!--Color Palette #3-->
+    <color name="brown3">#5a3e33</color>
+    <color name="light_green3">#d0d08a</color>
+    <color name="grey3">#827376</color>
+    <color name="yellow_bisquit3">#efdccb</color>
+    <color name="orange3">#da7a47</color>
+
+</resources>
